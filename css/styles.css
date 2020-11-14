@@ -1,4 +1,4 @@
-/*удаление стандартній ситилей*/
+/*изменение стандартных ситилей*/
 ul {
   list-style: none;
 }
@@ -6,8 +6,15 @@ ul {
 a {
   text-decoration: none;
 }
+a:visited {
+  color: #212121;
+}
+address {
+  font-style: normal;
+}
 /*Основные стили*/
-.body-studio {
+.body-studio,
+.body-portfolio {
   font-family: 'Roboto';
   font-style: normal;
 }
@@ -32,9 +39,12 @@ a {
   color: #757575;
 }
 
-.header-site a:hover {
+.header-site a:hover,
+.header-site a:focus,
+.header-site a:active {
   color: #2196f3;
 }
+
 /*Стили для заглавной секции*/
 .hero {
   background-color: #2f303a;
@@ -165,10 +175,41 @@ a {
   color: #ffffff;
 }
 
-.footer-site a {
+.footer-site span {
   font-size: 14px;
   line-height: 1.71;
   /* or 171% */
   letter-spacing: 0.03em;
   color: rgba(100%, 100%, 100%, 60%);
+}
+
+/*CSS Портфолио*/
+.main-portfolio {
+  background-color: #ffffff;
+}
+
+.portfolio-filters p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  /* identical to box height, or 162% */
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.portfolio-filters p::first-letter {
+  text-transform: capitalize;
+}
+
+.filter {
+  background: #f5f4fa;
+  border-radius: 4px;
+  width: 168px;
+  height: 38px;
+}
+.item {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  width: 370px;
+  height: 404px;
 }
