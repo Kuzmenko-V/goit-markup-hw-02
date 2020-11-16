@@ -1,13 +1,26 @@
+/*CSS - палитра цветов*/
+:root {
+  --main-color: #ffffff;
+  --text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --first-decor-color: #2f303a;
+  --secondary-decor-color: #f5f4fa;
+  --border--color: #eeeeee;
+}
 /*изменение стандартных ситилей*/
 ul {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 a {
   text-decoration: none;
+  color: var(--title-text-color);
 }
 a:visited {
-  color: #212121;
+  color: var(--title-text-color);
 }
 address {
   font-style: normal;
@@ -17,10 +30,16 @@ address {
 .body-portfolio {
   font-family: 'Roboto';
   font-style: normal;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header-links-pages .site-page-current {
+  color: var(--accent-color);
 }
 /*Стили для шапки сайта*/
 .header-site {
-  background-color: #ffffff;
+  background-color: var(--main-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -29,26 +48,26 @@ address {
 }
 
 .header-links-pages {
-  color: #212121;
+  color: var(--title-text-color);
 }
 .header-links-pages p::first-letter {
   text-transform: capitalize;
 }
 
 .header-links-contacts {
-  color: #757575;
+  color: var(--text-color);
 }
 
 .header-site a:hover,
 .header-site a:focus,
-.header-site a:active {
-  color: #2196f3;
+.header-site a:active code {
+  color: var(--accent-color);
 }
 
 /*Стили для заглавной секции*/
 .hero {
-  background-color: #2f303a;
-  color: #ffffff;
+  background-color: var(--first-decor-color);
+  color: var(--main-color);
 }
 .hero h1 {
   font-weight: 900;
@@ -69,7 +88,7 @@ address {
 
 /*Слили для секции особенности*/
 .features {
-  background-color: #ffffff;
+  background-color: var(--main-color);
 }
 
 .features h3 {
@@ -79,7 +98,7 @@ address {
   /* or 114% */
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 .features p {
@@ -88,7 +107,7 @@ address {
   line-height: 1.71;
   /* or 171% */
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--text-color);
 }
 
 .features p::first-letter {
@@ -96,7 +115,7 @@ address {
 }
 /* стили для секции виды работ*/
 .work-profile {
-  background-color: #ffffff;
+  background-color: var(--main-color);
 }
 
 .work-profile h2 {
@@ -106,7 +125,7 @@ address {
   /* or 117% */
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 .work-profile h2::first-letter {
@@ -114,7 +133,7 @@ address {
 }
 /* стили для секции наша команда*/
 .our-team {
-  background-color: #f5f4fa;
+  background-color: var(--secondary-decor-color);
 }
 
 .our-team h2 {
@@ -124,7 +143,7 @@ address {
   /* or 117% */
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 .our-team h2::first-letter {
@@ -132,9 +151,16 @@ address {
 }
 
 .our-team li {
-  background-color: #ffffff;
+  background-color: var(--main-color);
   width: 270px;
   height: 378px;
+
+  background: #ffffff;
+  /* material shadow v1 */
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .our-team h3 {
@@ -144,11 +170,11 @@ address {
   /* identical to box height */
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--title-text-color);
   text-transform: capitalize;
 }
 .our-team h4 {
-  color: #757575;
+  color: var(--text-color);
 
   font-weight: normal;
   font-size: 16px;
@@ -163,7 +189,7 @@ address {
 }
 /*стили для секции подвал*/
 .footer-site {
-  background-color: #2f303a;
+  background-color: var(--first-decor-color);
   font-weight: normal;
 }
 
@@ -172,7 +198,7 @@ address {
   line-height: 1.71;
   /* or 171% */
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--main-color);
 }
 
 .footer-site span {
@@ -185,7 +211,7 @@ address {
 
 /*CSS Портфолио*/
 .main-portfolio {
-  background-color: #ffffff;
+  background-color: var(--main-color);
 }
 
 .portfolio-filters p {
@@ -201,14 +227,23 @@ address {
 }
 
 .filter {
-  background: #f5f4fa;
+  background: var(--secondary-decor-color);
   border-radius: 4px;
   width: 168px;
   height: 38px;
 }
+
+.portfolio-filters li:hover,
+.portfolio-filters li:active {
+  background: var(--accent-color);
+  /* shadow-middle */
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
 .item {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
+  background: var(--main-color);
+  border: 1px solid var(--border--color);
   box-sizing: border-box;
   width: 370px;
   height: 404px;
@@ -220,7 +255,7 @@ address {
   line-height: 2;
   /* identical to box height, or 200% */
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--title-text-color);
   text-transform: capitalize;
 }
 
@@ -230,7 +265,7 @@ address {
   line-height: 1.88;
   /* identical to box height, or 188% */
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--text-color);
 }
 
 .item h4::first-letter {
